@@ -1,0 +1,27 @@
+<form action="post">
+    <div class="row-fluid">
+        <div class="span6" data-fields="CanYouCome"></div>
+        <div class="span6" data-fields="Name"></div>
+    </div>
+    <div class="row-fluid" >
+        <div class="span6">
+            <div data-fields="Email"></div>
+            <div data-fields="MobileNumber"></div>
+            <div data-fields="NameOfGuest"></div>
+        </div>
+        <div class="span6">
+            <div data-fields="Address"></div>
+            <div data-fields="SpecialRequirements"></div>
+        </div>
+    </div>
+    <div class="row-fluid" >
+        <div class="span6">
+            <input type="submit" value="Send RSVP" class="btn btn-large btn-green" id="CreateWeddingInviteButton" />
+            <!-- This div is shown when we are waiting for a response from the rest service -->
+            <div class="InProgress"><span></span><img src="img/ajax-loader.gif" /></div>
+        </div>
+    </div>
+
+    <div class="row-fluid" class="span6"><span class="ValidationSummary">&nbsp;</span></div>
+    <!-- This div is where error messages from the REST service are put -->
+</form>

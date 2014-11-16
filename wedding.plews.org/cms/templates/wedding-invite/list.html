@@ -1,0 +1,33 @@
+<style type="text/css">
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Address</th>
+        <th>Attendance</th>
+        <th>Special Requirements</th>
+        <th>Name of guest</th>
+    </tr>
+    <% _.each(models, function(WeddingInvite, i){ %>
+        <% var weddinginvite =  WeddingInvite.toJSON(); %>
+        <tr>
+            <td><%=weddinginvite.Name %></td>
+            <td><%=weddinginvite.Email %></td>
+            <td><%=weddinginvite.MobileNumber %></td>
+            <td><pre><%=weddinginvite.Address %></pre></td>
+            <td><%=weddinginvite.CanYouCome %></td>
+            <td><%=weddinginvite.SpecialRequirements %></td>
+            <td><%=weddinginvite.NameOfGuest %></td>
+            <td>
+              <a href="<%= '#ViewWeddingInvite/' + weddinginvite.id %>">View</a>
+              <a href="<%= '#EditWeddingInvite/' + weddinginvite.id %>">Edit</a>
+            </td>
+        </tr>
+    <% }); %>
+</table>
